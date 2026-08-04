@@ -16,10 +16,17 @@ btn.addEventListener("click", () => {
 });
 function openGift() {
     // Change the gift box to an open box or heart
-    document.getElementById("gift-box").innerHTML = "💖";
+    document.getElementById("gift-box").innerHTML = "❤️";
     
     // Show the hidden surprise message
     document.getElementById("surprise-message").style.display = "block";
+    
+    // Play the background music
+    const music = document.getElementById("music");
+    if (music) {
+        music.play();
+    }
+}
 }
 function createHeart() {
     const heart = document.createElement("div");
