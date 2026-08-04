@@ -65,3 +65,24 @@ button:hover{
 }
 
 .gallery
+.gift-container {
+    text-align: center;
+    margin: 40px auto;
+    cursor: pointer;
+}
+
+.gift-box {
+    font-size: 80px;
+    transition: transform 0.3s ease;
+}
+
+.gift-box:hover {
+    transform: scale(1.1);
+}
+
+.hidden {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
