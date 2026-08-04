@@ -50,10 +50,21 @@ function updateCountdown() {
         counterElement.innerText = `${days} Days, ${hours} Hours, ${minutes} Minutes`;
     }
 }
+const birthDate = new Date("YOUR_BIRTH_DATE_HERET00:00:00"); // or whatever date you put
+
+function updateCountdown() {
+    const now = new Date();
+    const diff = now - birthDate;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / 1000 / 60) % 60);
+
+    const counterElement = document.getElementById("countdown");
+    if (counterElement) {
+        counterElement.innerText = `${days} Days, ${hours} Hours, ${minutes} Minutes`;
+    }
+}
 
 setInterval(updateCountdown, 1000);
 updateCountdown();
-function revealSecret(element, message) {
-    element.innerText = message;
-    element.style.background = "#ff69b4";
-}
