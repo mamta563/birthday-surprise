@@ -14,3 +14,10 @@ btn.addEventListener("click", () => {
         alert("🎂 Happy Birthday My Lovely Sister ❤️\n\nMay God bless you with happiness, success, good health and lots of love.\n\nLove You Forever ❤️\n\n- Mamta Kumari");
     }, 1000);
 });
+function openGift() {
+    // Change the gift box to an open box or heart
+    document.getElementById("gift-box").innerHTML = "💖";
+    
+    // Show the hidden surprise message
+    document.getElementById("surprise-message").style.display = "block";
+}
