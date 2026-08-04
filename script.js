@@ -21,3 +21,17 @@ function openGift() {
     // Show the hidden surprise message
     document.getElementById("surprise-message").style.display = "block";
 }
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("floating-heart");
+    heart.innerHTML = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 2 + 3) + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 4000);
+}
+
+setInterval(createHeart, 400);
