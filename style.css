@@ -12,6 +12,7 @@ body{
     align-items:center;
     min-height:100vh;
     text-align:center;
+    flex-direction: column;
 }
 
 .container{
@@ -21,6 +22,7 @@ body{
     padding:30px;
     border-radius:20px;
     box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    margin: 20px auto;
 }
 
 h1{
@@ -55,7 +57,7 @@ button:hover{
 }
 
 .photo{
- width:250px !important;
+    width:250px !important;
     height:320px !important;
     object-fit:contain !important;
     border-radius:15px !important;
@@ -64,7 +66,11 @@ button:hover{
     border:5px solid #ff69b4 !important;   
 }
 
-.gallery
+.gallery {
+    text-align: center;
+    margin: 20px 0;
+}
+
 .gift-container {
     text-align: center;
     margin: 40px auto;
@@ -80,12 +86,12 @@ button:hover{
     transform: scale(1.1);
 }
 
-.hidden {
-    display: none;
+#surprise-message {
     text-align: center;
     margin-top: 20px;
     animation: fadeIn 1s ease-in-out;
 }
+
 @keyframes floatUp {
     0% { transform: translateY(0vh) scale(0.8); opacity: 1; }
     100% { transform: translateY(-100vh) scale(1.2); opacity: 0; }
@@ -99,6 +105,7 @@ button:hover{
     z-index: 999;
     user-select: none;
 }
+
 .secret-card {
     background: #ffb6c1;
     padding: 15px;
@@ -110,6 +117,7 @@ button:hover{
     color: #fff;
     transition: 0.3s;
 }
+
 .secret-card:hover {
     background: #ff69b4;
     transform: scale(1.05);
