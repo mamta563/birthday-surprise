@@ -1,26 +1,39 @@
-const btn = document.getElementById("surpriseBtn");
-const message = document.getElementById("message");
-const music = document.getElementById("music");
+document.addEventListener("DOMContentLoaded", function() {
+    const btn = document.getElementById("surpriseBtn");
+    const message = document.getElementById("message");
+    const music = document.getElementById("music");
 
-btn.addEventListener("click", () => {
-    message.classList.remove("hidden");
-    btn.style.display = "none";
+    if (btn) {
+        btn.addEventListener("click", () => {
+            if (message) {
+                message.classList.remove("hidden");
+            }
+            btn.style.display = "none";
 
-    if (music) {
-        music.play();
+            if (music) {
+                music.play();
+            }
+
+            setTimeout(() => {
+                alert("🎂 Happy Birthday My Lovely Sister ❤️\n\nMay God bless you with happiness, success, good health and lots of love.\n\nLove You Forever ❤️\n\n- Mamta Kumari");
+            }, 1000);
+        });
     }
-
-    setTimeout(() => {
-        alert("🎂 Happy Birthday My Lovely Sister ❤️\n\nMay God bless you with happiness, success, good health and lots of love.\n\nLove You Forever ❤️\n\n- Mamta Kumari");
-    }, 1000);
 });
 
 function openGift() {
     // Change the gift box to a heart
-    document.getElementById("gift-box").innerHTML = "❤️";
+    const giftBox = document.getElementById("gift-box");
+    if (giftBox) {
+        giftBox.innerHTML = "❤️";
+    }
     
     // Show the hidden surprise message
-    document.getElementById("surprise-message").style.display = "block";
+    const surpriseMessage = document.getElementById("surprise-message");
+    if (surpriseMessage) {
+        surpriseMessage.style.display = "block";
+        surpriseMessage.classList.remove("hidden");
+    }
     
     // Play the background music
     const music = document.getElementById("music");
