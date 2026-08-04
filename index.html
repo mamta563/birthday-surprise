@@ -4,83 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday Sister ❤️</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<audio id="music" src="mysong.mp3" loop></audio>     
-<h1 style="color: #ff1493; text-align: center; font-family: cursive; margin-top: 20px;">For My Dearest Sister Patlu ❣️</h1>
-<div class="container">
 
-    <h1>🎉 Happy Birthday My Lovely Sister 🎉</h1>
+    <!-- Background Audio -->
+    <audio id="music" loop>
+        <source src="mysong.mp3" type="audio/mpeg">
+    </audio>     
 
-    <h2>May your smile always shine brighter than the stars ✨</h2>
+    <!-- Header Title -->
+    <h1 style="color: #ff1493; text-align: center; font-family: cursive; margin-top: 20px;">For My Dearest Sister Patlu ❣️</h1>
 
-    <button id="surpriseBtn">
-        Click Here 🎁
-    </button>
+    <div class="container" style="text-align: center;">
+        <h1>🎉 Happy Birthday My Lovely Sister 🎉</h1>
+        <h2>May your smile always shine brighter than the stars ✨</h2>
 
-    <div id="message" class="hidden">
+        <button id="surpriseBtn" style="padding: 10px 20px; font-size: 18px; cursor: pointer;">
+            Click Here 🎁
+        </button>
 
-        <img src="images/photo1.jpg" class="photo">
+        <div id="message" class="hidden" style="margin-top: 20px;">
+            <p>
+                Happy Birthday to the most beautiful sister. ❤️
+                <br><br>
+                May all your dreams come true.
+                <br><br>
+                Keep smiling... Keep shining...
+                <br><br>
+                You will always be my favourite sister. ❤️
+            </p>
 
-        <p>
-            Happy Birthday to the most beautiful sister. ❤️
-            <br><br>
-            May all your dreams come true.
-            <br><br>
-            Keep smiling...
-            <br>
-            Keep shining...
-            <br><br>
-            You will always be my favourite sister. ❤️
-        </p>
-
-        <div class="gallery">
-
-            <img src="images/photo.jpg.jpeg" class="photo">
-
-<div class="gallery">
-<img src="photo.jpg.jpeg" class="frame-img">
-<img src="photo2.jpg.jpeg" class="frame-img">
-<img src="photo3.jpg.jpeg" class="frame-img">
-<img src="photo4.jpg.jpeg" class="frame-img">
-<img src="photo5.jpg.jpeg" class="frame-img">  
-</div>     
-
+            <div class="gallery" style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 20px;">
+                <img src="photo.jpg.jpeg" class="frame-img" style="width: 100px; height: 100px; object-fit: cover;">
+                <img src="photo2.jpg.jpeg" class="frame-img" style="width: 100px; height: 100px; object-fit: cover;">
+                <img src="photo3.jpg.jpeg" class="frame-img" style="width: 100px; height: 100px; object-fit: cover;">
+                <img src="photo4.jpg.jpeg" class="frame-img" style="width: 100px; height: 100px; object-fit: cover;">
+                <img src="photo5.jpg.jpeg" class="frame-img" style="width: 100px; height: 100px; object-fit: cover;">  
+            </div>     
         </div>
-
     </div>
 
-</div>
+    <!-- Gift Box Section -->
+    <div class="gift-container" onclick="openGift()" style="text-align: center; margin-top: 40px; cursor: pointer;">
+        <div id="gift-box" class="gift-box" style="font-size: 50px;">🎁</div>
+        <p>Click to open your surprise!</p>
+    </div>
 
-<audio id="music" autoplay loop>
-    <source src="music/song.mp3" type="audio/mpeg">
-</audio>
+    <!-- Hidden Surprise Message -->
+    <div id="surprise-message" class="hidden" style="text-align: center; margin-top: 20px;">
+        <h2>🎉 Happy Birthday to my wonderful sister Patlu! ❣️ 🎉</h2>
+        <p>You mean the world to me! Thank you for always being the best.</p>
+    </div>
 
-<script src="script.js"></script>
-<!-- Gift Box Section -->
-<div class="gift-container" onclick="openGift()">
-    <div id="gift-box" class="gift-box">🎁</div>
-    <p>Click to open your surprise!</p>
-</div>
+    <!-- Secret Memories Section -->
+    <div class="secret-container" style="text-align: center; margin: 30px;">
+        <h3>Tap the cards for secret memories! 🤫</h3>
+        <div onclick="revealSecret(this, 'Remember when we laughed so hard we couldn\\'t breathe?')" class="secret-card" style="cursor: pointer; padding: 10px; background: #ffccd5; margin: 10px auto; width: 200px; border-radius: 8px;">🎁 Secret Memory 1</div>
+        <div onclick="revealSecret(this, 'You are the best sister in the entire universe!')" class="secret-card" style="cursor: pointer; padding: 10px; background: #ffccd5; margin: 10px auto; width: 200px; border-radius: 8px;">💖 Secret Note 2</div>
+    </div>
 
-<!-- Hidden Surprise Message (Revealed when gift is opened) -->
-<div id="surprise-message" class="hidden">
-    <h2>🎉 Happy Birthday to my wonderful sister Patlu! ❣️ 🎉</h2>
-    <p>You mean the world to me! Thank you for always being the best.</p>
-</div>
+    <!-- Special Memories Box -->
+    <div style="background: #fff0f5; padding: 20px; border-radius: 15px; text-align: center; margin: 30px auto; width: 80%; max-width: 600px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <h3 style="color: #d81b60;">Our Special Memories 🌸</h3>
+        <p style="font-size: 16px; color: #444; line-height: 1.6;">
+            From all our crazy laughs to sharing secrets late at night, having you as my sister is the greatest gift ever. Even when we fight, you remain my absolute favorite person!
+        </p>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
-<div class="secret-container" style="text-align: center; margin: 30px;">
-    <h3>Tap the cards for secret memories! 🤫</h3>
-    <div onclick="revealSecret(this, 'Remember when we laughed so hard we couldn\'t breathe?')" class="secret-card">🎁 Secret Memory 1</div>
-    <div onclick="revealSecret(this, 'You are the best sister in the entire universe!')" class="secret-card">💖 Secret Note 2</div>
-</div>
-<div style="background: #fff0f5; padding: 20px; border-radius: 15px; text-align: center; margin: 30px auto; width: 80%; max-width: 600px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-    <h3 style="color: #d81b60;">Our Special Memories 🌸</h3>
-    <p style="font-size: 16px; color: #444; line-height: 1.6;">
-        From all our crazy laughs to sharing secrets late at night, having you as my sister is the greatest gift ever. Even when we fight, you remain my absolute favorite person!
-    </p>
-</div>
