@@ -35,3 +35,21 @@ function createHeart() {
 }
 
 setInterval(createHeart, 400);
+const birthDate = new Date("2000-01-01T00:00:00"); // Change to her birth date (YYYY-MM-DD)
+
+function updateCountdown() {
+    const now = new Date();
+    const diff = now - birthDate;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / 1000 / 60) % 60);
+
+    const counterElement = document.getElementById("countdown");
+    if (counterElement) {
+        counterElement.innerText = `${days} Days, ${hours} Hours, ${minutes} Minutes`;
+    }
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
