@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
             btn.style.display = "none";
 
             if (music) {
-                music.play();
+                music.play().catch(error => console.log("Audio play blocked:", error));
             }
 
             setTimeout(() => {
@@ -22,24 +22,26 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function openGift() {
-    // Change the gift box to a heart
     const giftBox = document.getElementById("gift-box");
     if (giftBox) {
         giftBox.innerHTML = "❤️";
     }
     
-    // Show the hidden surprise message
     const surpriseMessage = document.getElementById("surprise-message");
     if (surpriseMessage) {
         surpriseMessage.style.display = "block";
         surpriseMessage.classList.remove("hidden");
     }
     
-    // Play the background music
     const music = document.getElementById("music");
     if (music) {
-        music.play();
+        music.play().catch(error => console.log("Audio play blocked:", error));
     }
+}
+
+// Fixed function name to match 'revealSecret' in HTML
+function revealSecret(element, text) {
+    element.innerText = text;
 }
 
 function createHeart() {
@@ -56,8 +58,3 @@ function createHeart() {
 }
 
 setInterval(createHeart, 400);
-
-// Secret memory card reveal function
-function secretReveal(element, text) {
-    element.innerText = text;
-}
