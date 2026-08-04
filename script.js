@@ -53,3 +53,7 @@ function updateCountdown() {
 
 setInterval(updateCountdown, 1000);
 updateCountdown();
+function revealSecret(element, message) {
+    element.innerText = message;
+    element.style.background = "#ff69b4";
+}
